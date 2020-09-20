@@ -49,6 +49,7 @@ def create():
         try:
             db.session.add(item)
             db.session.commit()
+            db.session.close()
             return redirect('/shop')
         except:
             return "Error Pls Enter Correct Dates"
