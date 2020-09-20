@@ -1,0 +1,204 @@
+{% extends 'wrapper.html' %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='../../static/create/css/style.css', v=1)}}">
+    <title>Ocolus</title>
+{% endblock %}
+{% block body %}
+           <div class="header row">
+       <div class="logo_container col-2 logo_top">
+            <div class="logo">
+                <div class="logo_png"></div>
+                <div class="dotted"></div>
+            </div>
+       </div>
+       <div class="header_info col-10">
+           <div class="header_line_top">
+               <div class="contact_list">
+                   <div class="contact contact_1">
+                       <span class="wish"><a href="#"><i class="fas fa-heart"></i> <span class="contact_text">Whishlist</span></a></span>
+                   </div>
+                   <div class="contact contact_2">
+                       <span class="order"><a href="#"><i class="fas fa-map-marker-alt"></i> <span class="contact_text">Track order</span></a></span>
+                   </div>
+                   <div class="contact contact_3">
+                       <span class="location"><a href="#"><i class="fas fa-map"></i> <span class="contact_text">Stores location</span></a></span>
+                   </div>
+                   <div class="contact contact_4">
+                       <span class="account"><a href="#"><i class="fas fa-user"></i> <span class="contact_text">Account</span></a></span>
+                    </div>
+                   <div class="contact contact_5">
+                       <span class="cart"><a href="#"><i class="fas fa-shopping-cart"></i> <span class="contact_text">Your cart</span></a></span>
+                   </div>
+               </div>
+           </div>
+            <div class="header_line_bottom">
+               <div class="logo_container logo_down">
+                        <div class="logo">
+                            <div class="logo_png"></div>
+                            <div class="dotted"></div>
+                        </div>
+                   </div>
+                <div class="nav_info">
+                    <div class="navs_list navs_list_1">
+                        <div class="nav nav_1"><a href="/">Home</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_2"><a href="/shop">Shop</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_3"><a href="#">Products</a><sup><span class="attention">NEW</span></sup></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_4"><a href="#">Blog</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_5"><a href="#">Portfolio</a><sup><span class="attention attention_2">HOT</span></sup></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_6"><a href="#">Pages</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_7"><a href="#">Men</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_8"><a href="#">Women</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_9"><a href="/create" id="nh">Create !</a></div>
+                    </div>
+                    <div class="search">
+                       <div class="box">
+                        <i class="material-icons">search</i>
+                            <div class="menu">
+                                <div class="burger">
+                                    <div class="bar_1 bar"></div>
+                                    <div class="bar_2 bar"></div>
+                                    <div class="bar_3 bar"></div>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <div class="p_header"></div>
+    <div class="navigation_mb">
+        <div class="navigation_mb_container">
+            <div class="logo_container mt-5">
+                <div class="logo">
+                    <div class="logo_png logo_png_2"></div>
+                    <div class="dotted"></div>
+                </div>
+           </div>
+           <div class="navs_list mt-4">
+                <div class="nav nav_1"><a href="#">Home</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_2"><a href="#">Shop</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_3"><a href="#">Products</a><sup><span class="attention">NEW</span></sup></div>
+                <div class="dotte"></div>
+                <div class="nav nav_4"><a href="#">Blog</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_5"><a href="#">Portfolio</a><sup><span class="attention attention_2">HOT</span></sup></div>
+                <div class="dotte"></div>
+                <div class="nav nav_6"><a href="#">Pages</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_7"><a href="#">Men</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_8"><a href="#">Women</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_9"><a href="#" id="nh">Buy Theme!</a></div>
+                <div class="nav my-4">
+                    <div class="burger burger_2">
+                        <div class="bar bar_p bar_p_1"></div>
+                        <div class="bar bar_p bar_p_2"></div>
+                        <div class="bar bar_p bar_p_3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second_section container">
+        <div class="second_section_box">
+            <div class="second_title">Create A Product</div>
+            <div class="subtitle mt-2">Home / Create</div>
+            <form method="post" class="form">
+                <input type="text" class="form-control mt-4" name="title" placeholder="Name of Product" id="title" required>
+                <div class="form-group">
+                    <input type="number" class="form-control" min="0" name="newPrice" placeholder="New Price of Product" id="price" step="any" required>
+                    <input type="number" class="form-control" min="0" name="oldPrice" placeholder="Old Price of Product" id="price" step="any">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="colors" placeholder="Color(s) of Product:  #12594a, . . ." id="colors" required>
+                    <input type="number" class="form-control" name="star" placeholder="Rating of Product" id="star" min="0" max="5">
+                </div>
+                <div class="form-group">
+<!--
+                        <div class="form-check">
+                            <label class="checkbox">
+                                <span class="radio__label">S</span>
+                                <span class="checkbox__input">
+                                    <input type="checkbox" name="S" id="S">
+                                        <span class="checkbox__control">
+                                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                                            </svg>
+                                        </span>
+                                    </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="checkbox">
+                                <span class="radio__label">M</span>
+                                <span class="checkbox__input">
+                                    <input type="checkbox" name="M" id="M">
+                                        <span class="checkbox__control">
+                                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                                            </svg>
+                                        </span>
+                                    </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="checkbox">
+                                <span class="radio__label">L</span>
+                                <span class="checkbox__input">
+                                    <input type="checkbox" name="L" id="L">
+                                        <span class="checkbox__control">
+                                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                                            </svg>
+                                        </span>
+                                    </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="checkbox">
+                                <span class="radio__label">XL</span>
+                                <span class="checkbox__input">
+                                    <input type="checkbox" name="XL" id="XL">
+                                        <span class="checkbox__control">
+                                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                                            </svg>
+                                        </span>
+                                    </span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="checkbox">
+                                <span class="radio__label">XXL</span>
+                                <span class="checkbox__input">
+                                    <input type="checkbox" name="XXL" id="XXL">
+                                        <span class="checkbox__control">
+                                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                                <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' />
+                                            </svg>
+                                        </span>
+                                    </span>
+                            </label>
+                        </div>
+-->
+                </div>
+                <button class="btn btn-success mt-3" type="submit">Add Product</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script src="../../static/create/script.js"></script>
+{% endblock %}

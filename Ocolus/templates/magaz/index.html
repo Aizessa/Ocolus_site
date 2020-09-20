@@ -1,0 +1,302 @@
+{% extends 'wrapper.html' %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="../../static/magaz/swiper.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='../../static/magaz/css/style.css', v=1)}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Ocolus</title>
+{% endblock %}
+{% block body %}
+    <div class="header row">
+       <div class="logo_container col-2 logo_top">
+            <div class="logo">
+                <div class="logo_png"></div>
+                <div class="dotted"></div>
+            </div>
+       </div>
+       <div class="header_info col-10">
+           <div class="header_line_top">
+               <div class="contact_list">
+                   <div class="contact contact_1">
+                       <span class="wish"><a href="#"><i class="fas fa-heart"></i> <span class="contact_text">Whishlist</span></a></span>
+                   </div>
+                   <div class="contact contact_2">
+                       <span class="order"><a href="#"><i class="fas fa-map-marker-alt"></i> <span class="contact_text">Track order</span></a></span>
+                   </div>
+                   <div class="contact contact_3">
+                       <span class="location"><a href="#"><i class="fas fa-map"></i> <span class="contact_text">Stores location</span></a></span>
+                   </div>
+                   <div class="contact contact_4">
+                       <span class="account"><a href="#"><i class="fas fa-user"></i> <span class="contact_text">Account</span></a></span>
+                    </div>
+                   <div class="contact contact_5">
+                       <span class="cart"><a href="#"><i class="fas fa-shopping-cart"></i> <span class="contact_text">Your cart</span></a></span>
+                   </div>
+               </div>
+           </div>
+            <div class="header_line_bottom">
+               <div class="logo_container logo_down">
+                        <div class="logo">
+                            <div class="logo_png"></div>
+                            <div class="dotted"></div>
+                        </div>
+                   </div>
+                <div class="nav_info">
+                    <div class="navs_list navs_list_1">
+                        <div class="nav nav_1"><a href="/">Home</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_2"><a href="/shop">Shop</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_3"><a href="#">Products</a><sup><span class="attention">NEW</span></sup></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_4"><a href="#">Blog</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_5"><a href="#">Portfolio</a><sup><span class="attention attention_2">HOT</span></sup></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_6"><a href="#">Pages</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_7"><a href="#">Men</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_8"><a href="#">Women</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_9"><a href="/create" id="nh">Create !</a></div>
+                    </div>
+                    <div class="search">
+                       <div class="box">
+                        <i class="material-icons">search</i>
+                            <div class="menu">
+                                <div class="burger">
+                                    <div class="bar_1 bar"></div>
+                                    <div class="bar_2 bar"></div>
+                                    <div class="bar_3 bar"></div>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <div class="p_header"></div>
+    <div class="navigation_mb">
+        <div class="navigation_mb_container">
+            <div class="logo_container mt-5">
+                <div class="logo">
+                    <div class="logo_png logo_png_2"></div>
+                    <div class="dotted"></div>
+                </div>
+           </div>
+           <div class="navs_list mt-4">
+                <div class="nav nav_1"><a href="/">Home</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_2"><a href="/shop">Shop</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_3"><a href="#">Products</a><sup><span class="attention">NEW</span></sup></div>
+                <div class="dotte"></div>
+                <div class="nav nav_4"><a href="#">Blog</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_5"><a href="#">Portfolio</a><sup><span class="attention attention_2">HOT</span></sup></div>
+                <div class="dotte"></div>
+                <div class="nav nav_6"><a href="#">Pages</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_7"><a href="#">Men</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_8"><a href="#">Women</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_9"><a href="/create" id="nh">Create Product!</a></div>
+                <div class="nav my-4">
+                    <div class="burger burger_2">
+                        <div class="bar bar_p bar_p_1"></div>
+                        <div class="bar bar_p bar_p_2"></div>
+                        <div class="bar bar_p bar_p_3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second_section">
+        <div class="article_block">
+            <div class="title">Fullwidth Sidebar 3 Column</div>
+            <div class="subtitle mt-2">Home / Shop</div>
+        </div>
+    </div>
+    <div class="main">
+        <aside>
+           <div class="burger_3">
+                <div class="bar bar_a bar_a_1"></div>
+                <div class="bar bar_a bar_a_2"></div>
+                <div class="bar bar_a bar_a_3"></div>
+            </div>
+            <div class="aside_container">
+                <div class="filters">
+                    <div class="filter_title">
+                        PRODUCT CATEGORIES
+                    </div>
+                    <div class="cloth_filter">
+                        <div class="cloth_filter_container">
+                            <div class="cloth_item"><a href="">Accessories</a><span class="num">(26)</span></div>
+                            <div class="cloth_item"><a href="">Bags</a><span class="num">(24)</span></div>
+                            <div class="cloth_item"><a href="">Jewellery</a><span class="num">(13)</span></div>
+                            <div class="cloth_item"><a href="">Man</a><span class="num">(19)</span></div>
+                            <div class="cloth_item"><a href="">Other</a><span class="num">(20)</span></div>
+                            <div class="cloth_item"><a href="">Shoes</a><span class="num">(10)</span></div>
+                        </div>
+                    </div>
+                    <div class="price_filter">
+                        <div class="filter_title">FILTER BY PRICE</div>
+                        <div class="progress_bar">
+                            <div id='id66' class="range">
+                              <div id='id66b' class='range__between'></div>
+                                <button id='id661' class="range__button_1"></button>
+                                <button id='id662' class="range__button_2"></button>
+                            </div>
+                        </div>
+                        <div class="con_price">
+                            <span class="price_set">Price: <span class="price_change">$<input id='id66i1' class='range_inpt1' type='number' min='150' max='700'>
+                                - $<input id='id66i2' class='range_inpt2' type='number' min='150' max='700'></span></span>
+                            <button role="button" type="submit">Filter</button>
+                        </div>
+                        
+                    </div>
+                    <div class="color_filter">
+                        <div class="filter_title">FILTER BY COLOR</div>
+                        <div class="colors lines">
+                            <div class="color_line line"><span class="color color_1"></span><a href="">Turquoise</a> <span class="num">(26)</span></div>
+                            <div class="color_line line"><span class="color color_2"></span><a href="">Emerald</a> <span class="num">(24)</span></div>
+                            <div class="color_line line"><span class="color color_3"></span><a href="">Sun Flower</a> <span class="num">(13)</span></div>
+                            <div class="color_line line"><span class="color color_4"></span><a href="">Carrot</a> <span class="num">(19)</span></div>
+                            <div class="color_line line"><span class="color color_5"></span><a href="">Belize Hole</a> <span class="num">(20)</span></div>
+                            <div class="color_line line"><span class="color color_6"></span><a href="">Alizarin</a> <span class="num">(10)</span></div>
+                        </div>
+                    </div>
+                    <div class="size_filter">
+                        <div class="filter_title">FILTER BY SIZE</div>
+                        <div class="size_lines lines">
+                            <div class="size_line line">
+                                <span class="checkbox">
+                                    <label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">S</span></label>
+                                </span>
+                                <span class="num">(26)</span>
+                            </div>
+                            <div class="size_line line"><span class="checkbox"><label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">M</span></label></span><span class="num">(24)</span></div>
+                            <div class="size_line line"><span class="checkbox"><label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">XL</span></label></span><span class="num">(13)</span></div>
+                            <div class="size_line line"><span class="checkbox"><label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">XXL</span></label></span><span class="num">(19)</span></div>
+                        </div>
+                    </div>
+                    <div class="brand_filter">
+                        <div class="filter_title">VENDOR</div>
+                        <div class="brand_lines lines">
+                            <div class="brand_line line"><span class="checkbox"><label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">Guess</span></label></span><span class="num">(26)</span></div>
+                            <div class="brand_line line"><span class="checkbox"><label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">Lacoste</span></label></span><span class="num">(24)</span></div>
+                            <div class="brand_line line"><span class="checkbox"><label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">Levi's</span></label></span><span class="num">(13)</span></div>
+                            <div class="brand_line line"><span class="checkbox"><label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">Polo</span></label></span><span class="num">(19)</span></div>
+                            <div class="brand_line line"><span class="checkbox"><label><input type="checkbox"><span class="input_indicator"></span><span class="check_text">Zara</span></label></span><span class="num">(20)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rated">
+                    <div class="filter_title">TOP RATED PRODUCTS</div>
+                    <div class="product">
+                        <div class="product_image product_image_1"><a href=""><img src="../../static/magaz/img/product_1.jpeg" alt="Slim-fit cotton shirt" width="100%" height="100%"></a></div>
+                        <div class="product_info">
+                            <div class="product_name"><a href="">Slim-fit cotton shirt</a></div>
+                            <div class="product_price">$380.00</div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product_image product_image_2"><a href=""><img src="../../static/magaz/img/product_2.jpeg" alt="Slim-fit linen shirt" width="100%" height="100%"></a></div>
+                        <div class="product_info">
+                            <div class="product_name"><a href="">Slim-fit linen shirt</a></div>
+                            <div class="product_price">$25.00</div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product_image product_image_3"><a href=""><img src="../../static/magaz/img/product_3.jpeg" alt="Embroidered long dress" width="100%" height="100%"></a></div>
+                        <div class="product_info">
+                            <div class="product_name"><a href="">Embroidered long dress</a></div>
+                            <div class="product_price">$605.00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tags">
+                    <div class="filter_title">TAGS</div>
+                    <div class="tags_list">
+                        <div class="tag">Bath & Body</div>
+                        <div class="tag">Beauty</div>
+                        <div class="tag">Body Dry</div>
+                        <div class="tag">Nature Oil</div>
+                        <div class="tag">Organic Makeup</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="main_info">
+            <div class="main_info_title">Shop</div>
+            <div class="search_product">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                       <span class="input-group-text search_text">{{ data[-1] }} <span class="found_products ml-2">Products Found</span></span>
+                        <button class="search_btn dropdown-toggle search_text" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sort: Best Selling</button>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                          <div role="separator" class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control search_line" aria-label="Text input">
+                    <div class="input-group-append">
+                        <button class="windows_btn right_side_search" type="button"><i class="fab fa-windows"></i></button>
+                        <button class="burger_btn right_side_search" type="button"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+                <div class="main_info_products mt-4">
+                <script type="text/javascript">
+                    document.write("<div class='swiper-container'><div class='swiper-wrapper'>{% for el in data %}<div class='swiper-slide swiper-slide-{{ el.id }}'><div class='card_product'><a href='/shop/product/{{ el.id }}'><div class='card_img card_img_{{ el.id }}' style='background: url(../../static/magaz/img/card_product_{{ el.id }}.jpeg) no-repeat center center; background-size: cover; '></div></a><div class='card_info'><a href='/shop/product/{{ el.id }}'><div class='card_title mt-3'>{{ el.title }}</div></a><div class='card_price mt-1'><span class='new_price' {% if el.oldPrice%} style='color: red;' {% endif %}>${{ el.newPrice }}</span>{% if el.oldPrice%}<span class='old_price ml-2'>${{ el.oldPrice }}</span>{% endif %}</div><div class='card_rate'>{% if el.star %}<div class='star_active'>{% for s in range(0, el.star, 1) %}<i class='fas fa-star'></i>{% endfor %}{% for s in range(0, 5-el.star, 1) %}<i class='fas fa-star' style='color: #d8d8d8;'></i>{% endfor %}</div>{% endif %}</div></div></div></div>{% endfor %}</div><div class='swiper-pagination'></div></div>");
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    <div class="footer">
+        <div class="footer_container row">
+            <div class="footer_column footer_column_1 col-3">
+                <ul class="footer_list">
+                    <li class="footer_subtitle"><a href="">Company</a></li>
+                    <li class="footer_link"><a href="">Shop</a></li>
+                    <li class="footer_link"><a href="">About</a></li>
+                    <li class="footer_link"><a href="">Contact</a></li>
+                    <li class="footer_link"><a href="">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer_column footer_column_2 col-6">
+                <div class="footer_main">
+                   <a href="/">
+                    <div class="footer_logo logo_container">
+                        <div class="logo">
+                            <div class="logo_png"></div>
+                            <div class="dotted"></div>
+                        </div>
+                    </div>
+                    <div class="footer_article">Ocolus- the ultimate WordPress E-commerce toolkit that helps you sell anything. The best choice for your next personal. @2020 Ocolus. All rights reserved.</div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer_column footer_column_3 col-3">
+                <ul class="footer_list">
+                    <li class="footer_subtitle"><a href="">Help</a></li>
+                    <li class="footer_link"><a href="">Terms</a></li>
+                    <li class="footer_link"><a href="">Privacy</a></li>
+                    <li class="footer_link"><a href="">Returns</a></li>
+                    <li class="footer_link"><a href="">Track Order</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="../../static/magaz/swiper.js"></script>
+    <script type="text/javascript" src="../../static/magaz/script.js"></script>
+{% endblock %}

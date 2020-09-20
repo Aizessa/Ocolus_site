@@ -1,0 +1,86 @@
+{% extends 'wrapper.html' %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='../../static/home/style.css', v=1)}}">
+    <title>Ocolus</title>
+{% endblock %}
+{% block body %}
+   <div class="first_section">
+       <div class="first_section_container">
+           <div class="header_top">
+                  <div class="header_content row">
+                   <div class="header_top_column header_top_column_1 dropdown col-2">
+                       <span class="dropdown-toggle" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</span>
+                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Russian</a>
+                            <a class="dropdown-item" href="#">Bulgarian</a>
+                            <a class="dropdown-item" href="#">English</a>
+                        </div>
+                   </div>
+                   <div class="header_top_columna header_top_column_2 col-8">
+                       <div class="nav_list">
+                           <div class="nav"><a href="">Women</a></div>
+                           <div class="nav"><a href="">Men</a></div>
+                           <div class="nav"><a href="">Children</a></div>
+                           <div class="nav"><a href="">Accessories</a></div>
+                           <div class="nav"><a href="">Blog</a></div>
+                           <div class="nav"><a href="">Contact</a></div>
+                       </div>
+                   </div>
+                   <div class="header_top_column header_top_column_3 col-2">
+                       <span>$0.0 Items</span>
+                   </div>
+               </div>
+           </div>
+           <div class="header_bottom">
+                  <div class="header_content" style="padding: 0px 14px 0px 14px;">
+                   <div class="header_bottom_column header_bottom_column_1">
+                       <div class="menu">
+                            <div class="hamburger">
+                                <div class="bar bar_1"></div>
+                                <div class="bar bar_2"></div>
+                                <div class="bar bar_3"></div>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="header_bottom_column header_bottom_column_2">
+                       <div class="logo mr-1"></div><div class="circle"></div>
+                   </div>
+                   <div class="header_bottom_column header_bottom_column_3">
+                       <div class="search"><i class="fas fa-search"></i></div>
+                   </div>
+               </div>
+            </div>
+       </div>
+   </div>
+   <div class="second_section">
+       <div class="second_section_container">
+           <div class="second_section_info">
+               <div class="second_section_title">Use Instagram to Boost Your Online Sales</div>
+               <div class="second_section_subtitle mt-3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem <p> Ipsum has been the industry's standard dummy text ever since the 1500s</p></div>
+           </div>
+           <div class="collage">
+               <div class="row_1 row">
+                   <div class="img_block col-lg-3 col-md-6 col-12 img_block_1 img_1"></div>
+                   <div class="img_block col-lg-3 col-md-6 col-12 mt-lg-0 mt-md-0 mt-3 img_block_2 img_2"></div>
+                   <div class="img_block col-lg-3 mt-lg-0 mt-md-3  mt-3 col-md-6 col-12 img_block_3 img_1"></div>
+                   <div class="img_block col-lg-3 mt-lg-0 mt-md-3  mt-3 col-md-6 col-12 img_block_4 img_2"></div>
+               </div>
+               <div class="row_2 mt-3 row">
+                   <div class="img_block col-lg-3 col-md-6 col-12 img_block_5 img_1"></div>
+                   <div class="img_block col-lg-3 col-md-6 col-12 mt-lg-0 mt-md-0 mt-3 img_block_6 img_2"></div>
+                   <div class="img_block col-lg-3 mt-lg-0 mt-md-3  mt-3 col-md-6 col-12 img_block_7 img_1"></div>
+                   <div class="img_block col-lg-3 mt-lg-0 mt-md-3  mt-3 col-md-6 col-12 img_block_8 img_2"></div>
+               </div>
+               <div class="row_3 mt-3 row">
+                   <div class="img_block col-lg-3 col-md-6 col-12 img_block_9 img_1"></div>
+                   <div class="img_block col-lg-3 col-md-6 col-12 mt-lg-0 mt-md-0 mt-3 img_block_10 img_2"></div>
+                   <div class="img_block col-lg-3 mt-lg-0 mt-md-3  mt-3 col-md-6 col-12 img_block_11 img_1"></div>
+                   <div class="img_block col-lg-3 mt-lg-0 mt-md-3  mt-3 col-md-6 col-12 img_block_12 img_2"></div>
+               </div>
+           </div>
+       </div>
+   </div>
+{% endblock %}
+{% block scripts %}
+    <script src="../../static/home/script.js"></script>
+{% endblock %}

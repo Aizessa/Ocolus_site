@@ -1,0 +1,257 @@
+{% extends 'wrapper.html' %}
+{% block head %}
+    <title>Ocolus</title>
+    <link rel="stylesheet" type="text/css" href="../../static/product/swiper.css">
+    <link rel="stylesheet" type="text/css" href="../../static/product/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="header row">
+       <div class="logo_container col-2 logo_top">
+            <div class="logo">
+                <div class="logo_png"></div>
+                <div class="dotted"></div>
+            </div>
+       </div>
+       <div class="header_info col-10">
+           <div class="header_line_top">
+               <div class="contact_list">
+                   <div class="contact contact_1">
+                       <span class="wish"><a href="#"><i class="fas fa-heart"></i> <span class="contact_text">Whishlist</span></a></span>
+                   </div>
+                   <div class="contact contact_2">
+                       <span class="order"><a href="#"><i class="fas fa-map-marker-alt"></i> <span class="contact_text">Track order</span></a></span>
+                   </div>
+                   <div class="contact contact_3">
+                       <span class="location"><a href="#"><i class="fas fa-map"></i> <span class="contact_text">Stores location</span></a></span>
+                   </div>
+                   <div class="contact contact_4">
+                       <span class="account"><a href="#"><i class="fas fa-user"></i> <span class="contact_text">Account</span></a></span>
+                    </div>
+                   <div class="contact contact_5">
+                       <span class="cart"><a href="#"><i class="fas fa-shopping-cart"></i> <span class="contact_text">Your cart</span></a></span>
+                   </div>
+               </div>
+           </div>
+            <div class="header_line_bottom">
+               <div class="logo_container logo_down">
+                        <div class="logo">
+                            <div class="logo_png"></div>
+                            <div class="dotted"></div>
+                        </div>
+                   </div>
+                <div class="nav_info">
+                    <div class="navs_list navs_list_1">
+                        <div class="nav nav_1"><a href="/">Home</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_2"><a href="/shop">Shop</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_3"><a href="#">Products</a><sup><span class="attention">NEW</span></sup></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_4"><a href="#">Blog</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_5"><a href="#">Portfolio</a><sup><span class="attention attention_2">HOT</span></sup></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_6"><a href="#">Pages</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_7"><a href="#">Men</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_8"><a href="#">Women</a></div>
+                        <div class="dotte"></div>
+                        <div class="nav nav_9"><a href="/create" id="nh">Create !</a></div>
+                    </div>
+                    <div class="search">
+                       <div class="box">
+                        <i class="material-icons">search</i>
+                            <div class="menu">
+                                <div class="burger">
+                                    <div class="bar_1 bar"></div>
+                                    <div class="bar_2 bar"></div>
+                                    <div class="bar_3 bar"></div>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>
+                </div>
+            </div>
+       </div>
+    </div>
+    <div class="p_header"></div>
+    <div class="navigation_mb">
+        <div class="navigation_mb_container">
+            <div class="logo_container mt-5">
+                <div class="logo">
+                    <div class="logo_png logo_png_2"></div>
+                    <div class="dotted"></div>
+                </div>
+           </div>
+           <div class="navs_list mt-4">
+                <div class="nav nav_1"><a href="/">Home</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_2"><a href="/shop">Shop</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_3"><a href="#">Products</a><sup><span class="attention">NEW</span></sup></div>
+                <div class="dotte"></div>
+                <div class="nav nav_4"><a href="#">Blog</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_5"><a href="#">Portfolio</a><sup><span class="attention attention_2">HOT</span></sup></div>
+                <div class="dotte"></div>
+                <div class="nav nav_6"><a href="#">Pages</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_7"><a href="#">Men</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_8"><a href="#">Women</a></div>
+                <div class="dotte"></div>
+                <div class="nav nav_9"><a href="/create" id="nh">Create Product!</a></div>
+                <div class="nav my-4">
+                    <div class="burger burger_2">
+                        <div class="bar bar_p bar_p_1"></div>
+                        <div class="bar bar_p bar_p_2"></div>
+                        <div class="bar bar_p bar_p_3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second_section">
+        <div class="second_section_container">
+            <span class="second_section_text">Home / Shop / Product / {{data[0]}}</span>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_container">
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                   {% for el in data[1] %}
+                    <div class="swiper-slide swiper-slide-{{el.id}}">
+                        <div class="arrow_left">
+                            <div class="prev_img" style="background: url(../../static/product/img/card_product_{{ data[1][el.id-2] }}.jpeg) no-repeat center center; background-size: cover; "></div>
+                            <div class="prev_text"><span class="prev_title">{{ data[1][el.id-2].title }}</span><span class="prev_price"><p> ${{ data[1][el.id-2].newPrice }}</p></span></div>
+                        </div>
+                        <div class="swiper_slide_center row">
+                            <div class="product_images_container col-5">
+                            w
+                            </div>
+                            <div class="product_info_container col-7">
+                                <div class="product_name">{{ el.title }}</div>
+                                <div class="product_rate">
+                                    {% if el.star %}
+                                        {% for i in range(0, el.star, 1) %}
+                                            <span class="star_y"><i class="fas fa-star"></i></span>
+                                        {% endfor %}
+                                        {% for i in range(0, 5-el.star, 1) %}
+                                            <span class="star_g"><i class="fas fa-star"></i></span>
+                                        {% endfor %}
+                                    {% else %}
+                                        <span class="no_rate">No rating</span>
+                                    {% endif %}
+                                </div>
+                                <div class="product_price">
+                                    <span class="product_new_price" {% if el.oldPrice %} style="color: #c91f28;" {% endif %}>${{ el.newPrice }}</span>
+                                    {% if el.oldPrice %}
+                                        <span class="product_old_price">${{ el.oldPrice }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="description">
+                                    Octopus - most powerful WordPress theme for your store online. <p> The best choice for your next personal or multi-vendor marketplace.</p>
+                                </div>
+                                <div class="delivery">
+                                    <div class="delivery_container">
+                                        <div class="delivery_1 delivery_bottom delivery_item"><i class="far fa-clock"></i> Expires In</div>
+                                        <div class="delivery_2 delivery_item"><div class="delivery_top">285</div><div class="delivery_bottom">Days</div></div>
+                                        <div class="delivery_3 delivery_item"><div class="delivery_top">17</div><div class="delivery_bottom">Hours</div></div>
+                                        <div class="delivery_4 delivery_item"><div class="delivery_top">48</div><div class="delivery_bottom">Minis</div></div>
+                                    </div>
+                                </div>
+                                <div class="colors_box">
+                                    <div class="color_text">Color</div>
+                                    <div class="color_container">
+                                        {% for i in el.colors.split(',') %}
+                                            <div class="color" style="background: {{ i }}"><i class="fas fa-check"></i></div>  
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <div class="sizes_box">
+                                    <div class="size_text">Size</div>
+                                    <div class="size_container">
+                                        
+                                    </div>
+                                </div>
+                                <div class="buttons_group">
+                                    <div class="col_group">
+                                        <div class="col_qual">
+                                            <div class="col_qual_box">
+                                                <button type="button" onclick="this.parentNode.querySelector('[type=number]').stepDown();" class="ml-2"><i class="fas fa-angle-left"></i></button>
+                                                <input type="number" name="number" min="0" max="100" value="01" id="">
+                                                <button type="button" onclick="this.parentNode.querySelector('[type=number]').stepUp();"><i class="fas fa-angle-right"></i></button>
+                                            </div>
+                                        </div>
+                                        <div class="add_to_cart">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="buy">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow_right">
+                            <div class="next_img" style="background: url(../../static/product/img/card_product_{{ data[1][el.id] }}.jpeg) no-repeat center center; background-size: cover;"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    {% for el in data[1] %}
+                    <div class="swiper-slide">{{el.id}}</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="ebat">{{ data[0].id }}</div>
+{% endblock %}
+{% block footer %}
+    <div class="footer">
+        <div class="footer_container row">
+            <div class="footer_column footer_column_1 col-3">
+                <ul class="footer_list">
+                    <li class="footer_subtitle"><a href="">Company</a></li>
+                    <li class="footer_link"><a href="">Shop</a></li>
+                    <li class="footer_link"><a href="">About</a></li>
+                    <li class="footer_link"><a href="">Contact</a></li>
+                    <li class="footer_link"><a href="">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer_column footer_column_2 col-6">
+                <div class="footer_main">
+                   <a href="/">
+                    <div class="footer_logo logo_container">
+                        <div class="logo">
+                            <div class="logo_png"></div>
+                            <div class="dotted"></div>
+                        </div>
+                    </div>
+                    <div class="footer_article">Ocolus- the ultimate WordPress E-commerce toolkit that helps you sell anything. The best choice for your next personal. @2020 Ocolus. All rights reserved.</div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer_column footer_column_3 col-3">
+                <ul class="footer_list">
+                    <li class="footer_subtitle"><a href="">Help</a></li>
+                    <li class="footer_link"><a href="">Terms</a></li>
+                    <li class="footer_link"><a href="">Privacy</a></li>
+                    <li class="footer_link"><a href="">Returns</a></li>
+                    <li class="footer_link"><a href="">Track Order</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script type="text/javascript" src="../../static/product/swiper.js"></script>
+    <script type="text/javascript" src="../../static/product/script.js"></script>
+{% endblock %}
